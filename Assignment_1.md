@@ -1,3 +1,51 @@
+## Task 1 - Literature
+
+1. Read the research article of the hands-on working group you are assigned to (see file “Student Groups.pdf” in shared folder General course material).
+
+I have read "Human White Adipose Tissue Displays Selective Insulin Resistance in the Obese State.
+
+---
+2. Answer the following questions:
+
+a. What is the medically relevant insight from the article?
+
+The major finding from the study is that the overall insulin-induced transcriptional response in human white adipose tissue (WAT) is selective. Different insulin-regulated pathways are affected differently in obesity, and many of the changes can be reversed after weight loss after bariatric surgery.
+
+b. Which genomics technology/ technologies were used?
+
+The primary genomics technology used was 5’ Cap Analysis of Gene Expression (5’ CAGE sequencing). They then analysed the data by using differential expression analysis (generalized linear models), gene set enrichment analysis and genomic region set enrichment analyses (LOLA). They also included previously published ChIPseq and microarray data in their analyses. 
+
+---
+3. Further related research questions
+
+a. List and explain at least three questions/ hypotheses you can think of that extend the analysis presented in the paper.
+
+- xxx
+- xxx
+- xxx
+
+b. [Optional] Devise a computational analysis strategy for (some of) the listed questions under 3a.
+
+- xxx
+
+---
+## Task 2 - Git repositories and R Markdown
+
+- I have made an account on Github, started a repository and a new project in that repository.
+- All the documentation for Assignment 1 is in this formatted text document.
+- During week 2 I will add all my hand-on work as R Markdown documents in the same repository.
+
+---
+## Task 3 - Introduction to R and online R course
+
+- I have installed the latest version of R software (4.6.1).
+- I had already prior to this course installed the most recent verison of RStudio Desktop (2026.10.0+233).
+- I have installed the latest version of the Bioconductor package.
+- I am very familiar with Tidyverse and ggplot2 since before this course - I will access them when necessary.
+- I have used R many times before, as well as have some experience with R Markdown, but when I get uncertain about something I will look into the optional course as well as the R manuals and the R Markdown cheatsheet. 
+
+
+---
 ## Task 4 - R basic operations
 
 ### 1. What is the square root of 10?
