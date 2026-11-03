@@ -300,9 +300,43 @@ ggsave("ggplot2_histogram.svg", plot = gg_hist, width = 10, height = 5)
 
 Save plot from basic boxplot function:
 ```r
-ggsave("jedi_sith_boxplot.png", plot = basic_box, width = 10, height = 5)
-ggsave("jedi_sith_boxplot.pdf", plot = basic_box, width = 10, height = 5)
-ggsave("jedi_sith_boxplot.svg", plot = basic_box, width = 10, height = 5)
+png("jedi_sith_boxplot.png", width = 1000, height = 500)
+
+boxplot(length ~ species,
+        data = magic_guys,
+        main = "Length per Species",
+        xlab = "Species",
+        ylab = "Length",
+        col = c("skyblue", "salmon"))
+
+dev.off()
+
+
+pdf("jedi_sith_boxplot.pdf")
+
+boxplot(length ~ species,
+        data = magic_guys,
+        main = "Length per Species",
+        xlab = "Species",
+        ylab = "Length",
+        col = c("skyblue", "salmon"))
+
+dev.off()
+
+
+install.packages("svglite")
+library(svglite)
+
+svglite("jedi_sith_boxplot.svg")
+
+boxplot(length ~ species,
+        data = magic_guys,
+        main = "Length per Species",
+        xlab = "Species",
+        ylab = "Length",
+        col = c("skyblue", "salmon"))
+
+dev.off()
 ```
 
 Save ggplot2 boxplot:
@@ -426,9 +460,15 @@ Now, there are no NAs in the datafile.
 ### 3. Visualize the data in the CO2 dataset in a way that gives you a deeper understanding of the data. What do you see?
 
 ```r
-boxplot(uptake ~ Type,
-        data = CO2,
-        col = c("darkgreen", "orange"))
+co2_box <- ggplot(CO2,
+                  aes(x = Type,
+                      y = uptake,
+                      fill = Type)) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("darkgreen", "orange")) +
+  theme_bw()
+
+co2_box
 
 
 ggplot(CO2,
