@@ -402,18 +402,29 @@ X=10%:
 genes_over_10pct <- names(missing_per_gene[missing_per_gene > 0.10 * nrow(microarray)])
 genes_over_10pct
 ```
+Answer: There are 512 genes with more than 10% missing values. 
 
 X=20%:
 ```r
 genes_over_20pct <- names(missing_per_gene[missing_per_gene > 0.20 * nrow(microarray)])
 genes_over_20pct
 ```
+Answer: There are 377 genes with more than 20% missing values. 
 
 X=50%:
 ```r
 genes_over_50pct <- names(missing_per_gene[missing_per_gene > 0.50 * nrow(microarray)])
 genes_over_50pct
 ```
+Answer: There are 74 genes with more than 50% missing values. 
+
+[1] "g18"  "g48"  "g55"  "g58"  "g60"  "g66"  "g73"  "g79"  "g83"  "g91"  "g93"  "g94"  "g99" 
+[14] "g105" "g109" "g132" "g135" "g137" "g138" "g172" "g260" "g290" "g301" "g329" "g352" "g355"
+[27] "g362" "g363" "g368" "g383" "g388" "g389" "g390" "g391" "g406" "g417" "g431" "g432" "g440"
+[40] "g461" "g462" "g498" "g519" "g527" "g531" "g532" "g538" "g572" "g575" "g576" "g577" "g585"
+[53] "g615" "g619" "g663" "g669" "g751" "g753" "g766" "g768" "g788" "g802" "g804" "g838" "g851"
+[66] "g854" "g864" "g892" "g893" "g898" "g919" "g932" "g971" "g980"
+
 
 Alternative method:
 ```r
