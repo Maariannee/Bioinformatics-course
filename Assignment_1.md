@@ -203,13 +203,27 @@ This functions sorts the vector, and then calculates the mean based on indices 2
 ---
 ### 3. Read about piping from here:https://r4ds.had.co.nz/pipes.html#pipes (you don’t have to learn everything, a basic understanding of the usage is enough). Write a short (max. 300 characters, no spaces) explanation of why, how, and when not to use pipes.
 
-Answer: ...
+Answer: Pipes are a tool that can be used when you want to do a sequence of multiple operations, and you want to write it easy to read and follow. In R pipes look like this: %>%.
+
+When not to use pipes:
+- If what you would want to do would need a pipe that is very long.
+- If you have more than one input or output. 
+- When you want to create complex relationships - pipes are linear. 
 
 ---
 ### 4. Familiarize yourself with the apply-family of functions (apply, lapply, sapply etc.) http://uc-r.github.io/apply_family Write a short explanation (max. 300 characters, no spaces) of why they could be useful in your work.
 
-Answer: ...
+Answer: The apply-functions (e.g. apply for matrices and data frames, lapply for lists, sapply for a simplified output etc.) works similarly to loops in that they can loop over every element in e.g. a list and do the set function for every element - but you can write the code in one line that is easy to read. 
 
+Example of my usage:
+```r
+microarray_imputed <- as.data.frame(
+  lapply(microarray, function(x) {
+    x[is.na(x)] <- mean(x, na.rm = TRUE)
+    x
+  })
+)
+```
 ---
 ## Task 7 - Basic visualization with R
 
