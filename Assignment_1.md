@@ -20,13 +20,13 @@ The primary genomics technology used was 5’ Cap Analysis of Gene Expression (5
 
 #### a. List and explain at least three questions/ hypotheses you can think of that extend the analysis presented in the paper.
 
-- xxx
-- xxx
-- xxx
+- How does short-term hyperinsulinemia affect WAT function downstream of insulin in the non-obese state?
+- Is the obesity-related weakened insulin response associated with adipose tissue inflammation?
+- Does adipose tissue insulin responsiveness predict future risk of type 2 diabetes?
 
 #### b. [Optional] Devise a computational analysis strategy for (some of) the listed questions under 3a.
 
-- xxx
+This assignment is optional, and I did unfortunately not have time to do it. 
 
 ---
 ## Task 2 - Git repositories and R Markdown
