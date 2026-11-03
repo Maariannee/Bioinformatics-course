@@ -238,6 +238,8 @@ hist2 <- hist(art2_data$length, main = "Sith", xlab = "Length", col = "salmon")
 
 par(mfrow = c(1, 1))
 ```
+<img width="4032" height="625" alt="image" src="figures/jedi_sith_histogram.svg" />
+
 
 ggplot2 version:
 ```r
@@ -249,7 +251,9 @@ gg_hist <- ggplot(magic_guys, aes(x=length, fill=species)) +
   theme_minimal()
 gg_hist
 ```
+<img width="4032" height="625" alt="image" src="figures/ggplot2_histogram.svg" />
 
+---
 #### b. Do the same comparison as in a. but with boxplots. If you want to use the ggplot2-package, use the functions ‘ggplot’ and ‘geom_boxplot’.
 
 Basic boxplot function:
@@ -258,6 +262,8 @@ basic_box <- boxplot(length ~ species, data = magic_guys,
         main = "Length per Species", xlab = "Species", ylab = "Length",
         col = c("skyblue", "salmon"))
 ```
+<img width="4032" height="625" alt="image" src="figures/jedi_sith_boxplot.svg" />
+
 
 ggplot2 version:
 ```r
@@ -268,8 +274,9 @@ gg_box <- ggplot(magic_guys, aes(x=species, y=length, fill=species)) +
   theme_minimal()
 gg_box
 ```
+<img width="4032" height="625" alt="image" src="figures/ggplot2_boxplot.svg" />
 
-
+---
 #### c. Save the plots with the ‘png’, ‘pdf’, and ‘svg’ formats. In which situation would you use which file format?
 
 Save plot from basic 'hist' function:
@@ -363,6 +370,7 @@ dim(microarray)
 ```
 Answer: There are 551 rows and 1000 columns (genes).
 
+---
 #### b. Count the missing values per gene and visualize this result.
 
 ```r
@@ -384,7 +392,9 @@ ggplot(missing_df, aes(x = Missing)) +
   ) +
   theme_bw()
 ```
+<img width="4032" height="625" alt="image" src="figures/missing_values.svg" />
 
+---
 #### c. Find the genes for which there are more than X% (X=10%, 20%, 50%) missing values.
 
 X=10%:
@@ -413,6 +423,7 @@ names(percent_missing[percent_missing > 20])
 names(percent_missing[percent_missing > 50])
 ```
 
+---
 #### d. Replace the missing values by the average expression value for the particular gene. (Note: Imputing data has to be used with caution!)
 
 ```r
@@ -469,8 +480,10 @@ co2_box <- ggplot(CO2,
   theme_bw()
 
 co2_box
+```
+<img width="4032" height="625" alt="image" src="figures/Uptake_vs_type_boxplot.svg" />
 
-
+```r
 ggplot(CO2,
        aes(x = conc,
            y = uptake,
@@ -489,9 +502,10 @@ ggplot(CO2,
     y = "Mean uptake"
   ) +
   theme_bw()
+```
+<img width="4032" height="625" alt="image" src="figures/Mean_CO2_uptake.svg" />
 
-
-
+```r
 ggplot(CO2,
        aes(x = conc,
            y = uptake,
@@ -511,6 +525,8 @@ ggplot(CO2,
   ) +
   theme_bw()
 ```
+<img width="4032" height="625" alt="image" src="figures/CO2_uptake_ind_plants.svg" />
+
 
 The Quebec plants have a higher general CO2 uptake than the Mississippi plants (seen from mean, median and boxplot). In the interaction plot, we see that again, but also that the mean uptake of the chilled plants are lower than that of the non-chilled plants. The difference is larger between chilled and non-chilled plants from Mississippi. In the interaction plot it also looks like the Mississippi plants reach a plateau in CO2 uptake with the higher concentrations. The Quebec plants does not seem as if they have completely reached the plateau just yet at the highest measured CO2 concentration. Looking at the trajectories of the individual plants, coloured based on treatment, we can see that while the Mississippi plants separate clearly based on treatment, the same effect is not as obvious in the plants from Quebec, with one non-chilled plant reaching less CO2 uptake than one-two chilled plants for the majority of the measurements. Individual variation has a bigger effect in the Quebec plants - or the plants from Quebec seemes to be better at withstanding the cold so being chilled or not does not have a great effect on the CO2 uptake. 
 
@@ -557,6 +573,7 @@ ggplot(chromosome, aes(x = length_mm)) +
              linewidth = 1) +
   theme_minimal()
 ```
+<img width="4032" height="625" alt="image" src="figures/chromosome_size_distribution.svg" />
 
 Answer: The length varies between rougly 13-88mm, with a mean length around 45mm. There are no chromosomes in the data set with a length between roughly 70-80mm. 
 
@@ -588,8 +605,10 @@ ggplot(chromosome,
     y = "Number of protein coding genes"
   ) +
   theme_bw()
+```
+<img width="4032" height="625" alt="image" src="figures/Protein-coding_genes_chromosome_length.svg" />
 
-
+```r
 ggplot(chromosome,
        aes(x = length_mm,
            y = mi_rna)) +
@@ -606,6 +625,8 @@ ggplot(chromosome,
   ) +
   theme_bw()
 ```
+<img width="4032" height="625" alt="image" src="figures/miRNA_chromosome_length.svg" />
+
 
 Answer: There is a correlation between length and number of miRNAs, and length and number of protein-coding genes, showing that longer genes tend to have more miRNAs and more protein-coding genes. The correlation with length is stronger for number of miRNAs than for number of protein-coding genes.
 
@@ -647,6 +668,7 @@ ggplot(proteins,
   ) +
   theme_bw()
 ```
+<img width="4032" height="625" alt="image" src="figures/protein_mass_vs_length.svg" />
 
 Answer: There is a very strong correlation between protein length and protein mass (Pearson r = 0.999, p < 0.001).
 
